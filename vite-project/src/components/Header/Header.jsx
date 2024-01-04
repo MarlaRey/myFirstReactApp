@@ -1,3 +1,7 @@
+import styles from './Header.module.scss'
+
 export const Header = () => {
-    return <header><h1>Min restaurant</h1></header>
+    return <header className={`${styles.headerWrapper} ${styles.headerFun}`}>
+        <h1>Min<span> lækre</span> restaurant</h1>
+        </header>
 }
