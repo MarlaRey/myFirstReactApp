@@ -1,18 +1,24 @@
-import {Header} from './components/Header/Header'
-import{Main}from './components/Main/Main'
-import {Footer} from './components/Footer/Footer'
-import './App.scss'
+// App.jsx
+import React from 'react';
+import PageComponent from './components/PageComponent/PageComponent';
 
-function App() {
-
-
+const App = () => {
   return (
-    <>
-    <Header></Header>
-    <Main></Main>
-    <Footer></Footer>
-    </>
-  )
-}
+    <div>
+      {/* Brug PageComponent i App og send nødvendige props */}
+      <PageComponent
+        title="Min App"
+        subtitle="En fantastisk app"
+        description="Dette er en fantastisk app med en beskrivelse."
+      >
+        {/* Child components */}
+        <p>Dette er en child component.</p>
+        <button>En anden child component</button>
+      </PageComponent>
+    </div>
+  );
+};
 
-export default App
+export default App;
+
+
